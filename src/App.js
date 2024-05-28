@@ -1,38 +1,20 @@
-import React from 'react'
-import GameCard  from './GameCard'
+import { useState } from "react";
+import HomePage from "./components/HomePage";
+import { TEST_GARMENTS } from "./TEST_GARMENTS";
+import { Link, Route, Routes } from 'react-router-dom';
 
-const gamesList = [
-  {
-    id: 0,
-    name: 'Sweater 1',
-    rating: null,
-    category: "Pullovers",
-    price: "$99",
-    color: 'Green'
-  },
-  {
-    id: 1,
-    name: 'Sweater 2',
-    rating: null,
-    category: "Vest",
-    price: "$99",
-    color: 'Green'
-  },
-  {
-  id: 2,
-  name: 'Sweater 3',
-  rating: null,
-  category: "Skirts",
-  price: "$99",
-  color: 'Green'
-}
-]
+
 
 function App() {
+  const [garmentsList, setGarmentsList] = useState( TEST_GARMENTS )
+
   return (
     <div>
       <h1>LG App</h1>
-      { gamesList.map( g => <GameCard game={g} /> )}
+        <Link to="/" className="btn-link me-3">Home</Link>
+        <Routes>
+          <Route path="/" element={<HomePage garmentsList={garmentsList} />} />
+        </Routes>
       </div>
   );
 }
