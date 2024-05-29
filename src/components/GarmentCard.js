@@ -6,6 +6,7 @@ function GarmentCard ({ garment }) {
         <h4>{garment.name}</h4>
         <p>{garment.color}</p>
         <p>{garment.price}</p>
+        <img src={garment.image} alt={garment.name} className="img-fluid" />
         <Link to={`/garments/${garment.id}`}>Details</Link>
         </div>
     );

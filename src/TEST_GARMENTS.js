@@ -6,6 +6,7 @@ export const TEST_GARMENTS = [
     category: "Pullovers",
     price: "$99",
     color: "Green",
+    image: "./assets/sweater-01.jpg"
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ export const TEST_GARMENTS = [
     category: "Vest",
     price: "$99",
     color: "Green",
+    image: './assets/sweater-02.jpg'
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const TEST_GARMENTS = [
     category: "Skirts",
     price: "$99",
     color: "Green",
+    image: './assets/sweater-03.jpg'
   },
 ];
 
